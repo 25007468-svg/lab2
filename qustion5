@@ -1,0 +1,20 @@
+import java.util.Random;
+
+public class L2Q5 {
+    public static void main(String[] args) {
+        Random rand = new Random();
+        // 生成 0 到 10000 之间的随机数
+        int number = rand.nextInt(10001);
+        
+        int temp = number;
+        int sum = 0;
+        
+        while (temp > 0) {
+            sum += temp % 10;
+            temp /= 10;
+        }
+        
+        System.out.println("Random number: " + number);
+        System.out.println("Sum of digits: " + sum);
+    }
+}
